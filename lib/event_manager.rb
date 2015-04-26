@@ -52,8 +52,20 @@ contents = CSV.open "event_attendees.csv", headers: true, header_converters: :sy
 #
 #   end
 
-contents.each do |row|
-  phone_number = clean_phone_number(row[:homephone])
-  puts phone_number if phone_number
-end
+# contents.each do |row|
+#   phone_number = clean_phone_number(row[:homephone])
+#   puts phone_number if phone_number
+# end
 
+# contents.map do |row|
+#   DateTime.strptime(row[:regdate].to_s, "%m/%d/%y %H:%M")
+# end.group_by do |date|
+#   date.hour
+# end
+
+
+# contents.map do |row|
+#   DateTime.strptime(row[:regdate].to_s, "%m/%d/%y %H:%M")
+# end.group_by do |date|
+#   date.wday
+# end
